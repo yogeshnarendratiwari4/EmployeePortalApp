@@ -12,7 +12,6 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.Divider
-import androidx.compose.material.LocalContentColor
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Lock
 import androidx.compose.material3.Card
@@ -79,7 +78,6 @@ fun CardComponent(heading :String,content : String,isEditable : Boolean = true,o
 }
 
 @Preview(showBackground = true)
-@OptIn(ExperimentalMaterial3Api::class)
 @Composable
 fun BasicDetailsPage() {
     Box(modifier = Modifier.fillMaxSize()){
@@ -100,7 +98,7 @@ fun BasicDetailsPage() {
                 Divider(modifier = Modifier.padding(start = 6.dp,end = 6.dp), color = Color.LightGray, thickness = 0.2.dp)
                 CardComponent("Date of Birth",basicDetailsPageData.dob)
                 Divider(modifier = Modifier.padding(start = 6.dp,end = 6.dp), color = Color.LightGray, thickness = 0.2.dp)
-                CardComponent("Gender",basicDetailsPageData.dob)
+                CardComponent("Gender",basicDetailsPageData.gender)
                 Divider(modifier = Modifier.padding(start = 6.dp,end = 6.dp), color = Color.LightGray, thickness = 0.2.dp)
                 CardComponent("Current Address", basicDetailsPageData.currentAddress)
                 Divider(modifier = Modifier.padding(start = 6.dp,end = 6.dp), color = Color.LightGray, thickness = 0.2.dp)
