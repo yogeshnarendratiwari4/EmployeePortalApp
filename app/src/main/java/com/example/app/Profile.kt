@@ -62,7 +62,7 @@ fun ProfileCardComponent(heading:String, image:Int, content:String, horizontalPa
            Row(modifier = Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween) {
                Row{
                    Image(
-                       modifier = Modifier.size(70.dp),
+                       modifier = Modifier.size(70.dp).padding(top=15.dp),
                        painter = painterResource(id = image),
                        contentDescription = "Image_Profile"
                    )
@@ -124,7 +124,7 @@ fun Profile() {
              ),
              ){
                  Column {
-                     ProfileCardComponent(user.name,R.drawable.basic,user.department+"-\n"+user.email,10.dp,10.dp,true,"View your profile ->")
+                     ProfileCardComponent(user.name,R.drawable.profile,user.department+"-\n"+user.email,10.dp,10.dp,true,"View your profile ->")
 
                  }
 
